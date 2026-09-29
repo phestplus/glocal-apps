@@ -100,6 +100,17 @@ dialog .lb-head { position: sticky; top: 0; display: flex; justify-content: spac
 dialog button { font: inherit; padding: 6px 12px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
 dialog .lb-body { overflow: auto; max-height: calc(94vh - 52px); }
 
+/* WhatsApp: a button in the page, and one that stays in the corner */
+.wa { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; background: #25d366; color: #fff; font-weight: 700; text-decoration: none; border: 0; }
+.wa:hover { background: #1ebe5a; }
+.wa svg { width: 22px; height: 22px; flex: none; }
+.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 50; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: #25d366; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+.wa-float:hover { background: #1ebe5a; }
+.wa-float svg { width: 32px; height: 32px; }
+.wa:focus-visible, .wa-float:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.contact { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.contact .num { color: var(--muted); }
+
 footer { padding: 32px 0 48px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
 
 @media (max-width: 640px) {
